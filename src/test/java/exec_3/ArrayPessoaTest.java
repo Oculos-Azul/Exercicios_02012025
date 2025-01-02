@@ -1,5 +1,6 @@
 package exec_3;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -16,6 +17,39 @@ class ArrayPessoaTest {
     private final ArrayPessoa array = new ArrayPessoa(10);
     private final Pessoa pessoa = new Pessoa(3, "foo");
     private final Model model = new Model(2);
+    private final ArrayPessoa arrayOrd = new ArrayPessoa(3);
+    private final ArrayPessoa ascArray = new ArrayPessoa(3);
+    private final ArrayPessoa descArray = new ArrayPessoa(3);
+
+    @Test
+    void shouldOrderAsc() {
+        arrayOrd.insert(0, new Pessoa(3, "Pessoa 3"));
+        arrayOrd.insert(1, new Pessoa(1, "Pessoa 1"));
+        arrayOrd.insert(2, new Pessoa(2, "Pessoa 2"));
+
+        ascArray.insert(0, new Pessoa(1, "Pessoa 1"));
+        ascArray.insert(1, new Pessoa(2, "Pessoa 2"));
+        ascArray.insert(2, new Pessoa(3, "Pessoa 3"));
+
+        arrayOrd.orderByIdAsc();
+
+        assertArrayEquals(ascArray.getItems(), arrayOrd.getItems());
+    }
+
+    @Test
+    void shouldOrderDesc() {
+        arrayOrd.insert(0, new Pessoa(3, "Pessoa 3"));
+        arrayOrd.insert(1, new Pessoa(1, "Pessoa 1"));
+        arrayOrd.insert(2, new Pessoa(2, "Pessoa 2"));
+
+        descArray.insert(0, new Pessoa(3, "Pessoa 3"));
+        descArray.insert(1, new Pessoa(2, "Pessoa 2"));
+        descArray.insert(2, new Pessoa(1, "Pessoa 1"));
+
+        arrayOrd.orderByIdDesc();
+
+        assertArrayEquals(descArray.getItems(), arrayOrd.getItems());
+    }
 
     @Test
     void shouldInsertPerson() {

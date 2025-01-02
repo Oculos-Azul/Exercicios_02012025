@@ -82,5 +82,4 @@ public class MyArray {
     public Model[] getItems() {
         return items;
     }
-
 }
