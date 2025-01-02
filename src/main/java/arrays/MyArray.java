@@ -26,7 +26,7 @@ public class MyArray {
             return false;
         }
     }
-
+ 
     public int searchId(Model model) {
         int count = 0;
         for (Model models : items) {
