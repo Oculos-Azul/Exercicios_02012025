@@ -1,0 +1,22 @@
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:00:24 INFO  utils.LoggerUtils - Posição [A][5] não contém valor diferente de 0
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Erro de cast no construtor: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 5
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Erro de cast ao verificar se contém valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Erro de cast ao remover valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Erro de cast ao recuperar valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:00:24 ERROR utils.LoggerUtils - Erro de cast no construtor: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:10:10 INFO  utils.LoggerUtils - Valor 5 não encontrado na linha [A]
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 1
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Erro de cast no construtor: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Índice inválido na inserção: Linha A, Coluna 5
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Erro de cast ao verificar se contém valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Erro de cast ao remover valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Erro de cast ao recuperar valor: class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+03-01-2025 12:10:10 ERROR utils.LoggerUtils - Erro de cast no construtor: class java.lang.String cannot be cast to class java.lang.Integer (java.lang.String and java.lang.Integer are in module java.base of loader 'bootstrap')
