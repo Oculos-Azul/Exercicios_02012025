@@ -11,4 +11,23 @@ public class Model {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+
+        if (obj instanceof Model) {
+            Model other = (Model) obj;
+            return this.id == other.id;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(id);
+    }
 }

@@ -15,7 +15,7 @@ import model.Pessoa;
 
 class ArrayPessoaTest {
     private final ArrayPessoa array = new ArrayPessoa(10);
-    private final Pessoa pessoa = new Pessoa(3, "foo");
+    private final Pessoa pessoa = new Pessoa(3, "foo", 18, "eudoido@tamo.com.br");
     private final Model model = new Model(2);
     private final ArrayPessoa arrayOrd = new ArrayPessoa(3);
     private final ArrayPessoa ascArray = new ArrayPessoa(3);
@@ -23,13 +23,13 @@ class ArrayPessoaTest {
 
     @Test
     void shouldOrderAsc() {
-        arrayOrd.insert(0, new Pessoa(3, "Pessoa 3"));
-        arrayOrd.insert(1, new Pessoa(1, "Pessoa 1"));
-        arrayOrd.insert(2, new Pessoa(2, "Pessoa 2"));
+        arrayOrd.insert(new Pessoa(3, "Pessoa 3", 25, "pessoa3@email.com"));
+        arrayOrd.insert(new Pessoa(1, "Pessoa 1", 30, "pessoa1@email.com"));
+        arrayOrd.insert(new Pessoa(2, "Pessoa 2", 22, "pessoa2@email.com"));
 
-        ascArray.insert(0, new Pessoa(1, "Pessoa 1"));
-        ascArray.insert(1, new Pessoa(2, "Pessoa 2"));
-        ascArray.insert(2, new Pessoa(3, "Pessoa 3"));
+        ascArray.insert(new Pessoa(1, "Pessoa 1", 30, "pessoa1@email.com"));
+        ascArray.insert(new Pessoa(2, "Pessoa 2", 22, "pessoa2@email.com"));
+        ascArray.insert(new Pessoa(3, "Pessoa 3", 25, "pessoa3@email.com"));
 
         arrayOrd.orderByIdAsc();
 
@@ -38,13 +38,13 @@ class ArrayPessoaTest {
 
     @Test
     void shouldOrderDesc() {
-        arrayOrd.insert(0, new Pessoa(3, "Pessoa 3"));
-        arrayOrd.insert(1, new Pessoa(1, "Pessoa 1"));
-        arrayOrd.insert(2, new Pessoa(2, "Pessoa 2"));
+        arrayOrd.insert(new Pessoa(3, "Pessoa 3", 25, "pessoa3@email.com"));
+        arrayOrd.insert(new Pessoa(1, "Pessoa 1", 30, "pessoa1@email.com"));
+        arrayOrd.insert(new Pessoa(2, "Pessoa 2", 22, "pessoa2@email.com"));
 
-        descArray.insert(0, new Pessoa(3, "Pessoa 3"));
-        descArray.insert(1, new Pessoa(2, "Pessoa 2"));
-        descArray.insert(2, new Pessoa(1, "Pessoa 1"));
+        descArray.insert(new Pessoa(3, "Pessoa 3", 25, "pessoa3@email.com"));
+        descArray.insert(new Pessoa(2, "Pessoa 2", 22, "pessoa2@email.com"));
+        descArray.insert(new Pessoa(1, "Pessoa 1", 30, "pessoa1@email.com"));
 
         arrayOrd.orderByIdDesc();
 
@@ -53,19 +53,19 @@ class ArrayPessoaTest {
 
     @Test
     void shouldInsertPerson() {
-        array.insert(0, pessoa);
+        array.insert(pessoa);
         assertNotNull(array.getItems()[0]);
     }
 
     @Test
     void shouldNotInsertIncorrectModel() {
-        array.insert(0, model);
+        array.insert(model);
         assertNull(array.getItems()[0]);
     }
 
     @Test
     void shouldRemovePerson() {
-        array.insert(0, pessoa);
+        array.insert(pessoa);
         assertTrue(array.search(pessoa));
 
         array.remove(pessoa);
@@ -85,7 +85,7 @@ class ArrayPessoaTest {
 
     @Test
     void shouldReturnTrueForModelPresentInArray() {
-        array.insert(0, pessoa);
+        array.insert(pessoa);
         assertTrue(array.search(pessoa));
     }
 
@@ -101,8 +101,8 @@ class ArrayPessoaTest {
 
     @Test
     void shouldReturnTrueForUpdatedPerson() {
-        array.insert(0, pessoa);
-        assertTrue(array.update(0, new Pessoa(22, "name")));
+        array.insert(pessoa);
+        assertTrue(array.update(0, new Pessoa(22, "name", 28, "name@email.com")));
         assertNotEquals(pessoa, array.getItems()[0]);
     }
 

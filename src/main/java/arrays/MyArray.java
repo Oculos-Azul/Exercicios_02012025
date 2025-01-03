@@ -7,13 +7,16 @@ import model.Model;
 public class MyArray {
     private static final Logger logger = LoggerFactory.getLogger(MyArray.class);
     private Model[] items;
+    private Integer countItems;
 
     public MyArray(int size) {
         this.items = new Model[size];
+        this.countItems = 0;
     }
 
-    public void insert(int index, Model model) {
-        items[index] = model;
+    public void insert(Model model) {
+    	items[countItems] = model;
+    	this.countItems++;
     }
 
     public boolean remove(Model model) {

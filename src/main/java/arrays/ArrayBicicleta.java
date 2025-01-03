@@ -1,23 +1,23 @@
 package arrays;
 
+import model.Bicicleta;
 import model.Model;
-import model.Pessoa;
 
-public class ArrayPessoa extends MyArray {
-    public ArrayPessoa(int size) {
+public class ArrayBicicleta extends MyArray {
+    public ArrayBicicleta(int size) {
         super(size);
     }
 
     @Override
     public void insert(Model model) {
-        if (instanceofPessoa(model)) {
+        if (instanceofBicicleta(model)) {
             super.insert(model);
         }
     }
 
     @Override
     public boolean remove(Model model) {
-        if (instanceofPessoa(model)) {
+        if (instanceofBicicleta(model)) {
             return super.remove(model);
         }
         return false;
@@ -25,7 +25,7 @@ public class ArrayPessoa extends MyArray {
 
     @Override
     public boolean search(Model model) {
-        if (instanceofPessoa(model)) {
+        if (instanceofBicicleta(model)) {
             return super.search(model);
         }
         return false;
@@ -33,13 +33,13 @@ public class ArrayPessoa extends MyArray {
 
     @Override
     public boolean update(int index, Model model) {
-        if (instanceofPessoa(model)) {
+        if (instanceofBicicleta(model)) {
             return super.update(index, model);
         }
         return false;
     }
 
-    private boolean instanceofPessoa(Model model) {
-        return model instanceof Pessoa;
+    private boolean instanceofBicicleta(Model model) {
+        return model instanceof Bicicleta;
     }
 }
