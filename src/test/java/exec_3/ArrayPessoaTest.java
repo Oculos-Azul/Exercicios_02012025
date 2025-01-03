@@ -1,12 +1,14 @@
 package exec_3;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import arrays.ArrayPessoa;
@@ -16,6 +18,7 @@ import model.Pessoa;
 class ArrayPessoaTest {
     private final ArrayPessoa array = new ArrayPessoa(10);
     private final Pessoa pessoa = new Pessoa(3, "foo", 18, "eudoido@tamo.com.br");
+    private Pessoa pessoa2;
     private final Model model = new Model(2);
     private final ArrayPessoa arrayOrd = new ArrayPessoa(3);
     private final ArrayPessoa ascArray = new ArrayPessoa(3);
@@ -35,6 +38,44 @@ class ArrayPessoaTest {
 
         assertArrayEquals(ascArray.getItems(), arrayOrd.getItems());
     }
+    
+    @BeforeEach
+    void setUp() {
+        pessoa2 = new Pessoa(1, "João", 25, "joao@example.com");
+    }
+    
+    @Test
+    void testGetName() {
+        assertEquals("João", pessoa2.getName());
+    }
+
+    @Test
+    void testSetName() {
+        pessoa.setName("Maria");
+        assertEquals("Maria", pessoa.getName());
+    }
+
+    @Test
+    void testGetAge() {
+        assertEquals(25, pessoa2.getAge());
+    }
+
+    @Test
+    void testSetAge() {
+        pessoa2.setAge(30);
+        assertEquals(30, pessoa2.getAge());
+    }
+
+    @Test
+    void testGetEmail() {
+        assertEquals("joao@example.com", pessoa2.getEmail());
+    }
+
+    @Test
+    void testSetEmail() {
+        pessoa.setEmail("maria@example.com");
+        assertEquals("maria@example.com", pessoa.getEmail());
+    }
 
     @Test
     void shouldOrderDesc() {
@@ -49,6 +90,17 @@ class ArrayPessoaTest {
         arrayOrd.orderByIdDesc();
 
         assertArrayEquals(descArray.getItems(), arrayOrd.getItems());
+    }
+    
+    @Test
+    void testSetId() {
+        model.setId(5);
+        assertEquals(5, model.getId());
+    }
+    
+    @Test
+    void testEquals_NullObject() {
+        assertFalse(model.equals(null));
     }
 
     @Test

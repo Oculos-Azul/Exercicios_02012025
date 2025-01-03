@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import model.Model;
 
 public class MyArray {
-    private static final Logger logger = LoggerFactory.getLogger(MyArray.class);
     private Model[] items;
     private Integer countItems;
 
@@ -25,7 +24,6 @@ public class MyArray {
             items[index] = null;
             return true;
         } else {
-            logger.warn("Falha ao remover: Modelo '{}' não encontrado no array.", model);
             return false;
         }
     }

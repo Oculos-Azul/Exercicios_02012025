@@ -39,12 +39,8 @@ public class Pessoa extends Model {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-
-        if (obj instanceof Pessoa) {
             Pessoa other = (Pessoa) obj;
             return super.equals(other) && this.email.equals(other.email);
-        }
-        return false;
     }
 
     @Override
