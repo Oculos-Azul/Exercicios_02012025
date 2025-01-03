@@ -4,12 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -45,12 +43,12 @@ class MyListTest {
 		assertEquals(14, list.size());
 		assertEquals(3, list.get(2));
 	}
-	
+
 	@Test
 	void testIsEmptySucesso() {
 		assertTrue(list.isEmpty());
 	}
-	
+
 	@Test
 	void testIsEmptyFailure() {
 		list.add(5);
@@ -104,7 +102,6 @@ class MyListTest {
 
 	@Test
 	void testGetFailure() {
-		MyList<Integer> list = new MyList<>();
 		list.add(1);
 		list.add(2);
 
@@ -121,7 +118,6 @@ class MyListTest {
 
 	@Test
 	void testSetFailure() {
-		MyList<Integer> list = new MyList<>();
 		list.add(1);
 		list.add(2);
 
@@ -163,12 +159,11 @@ class MyListTest {
 
 	@Test
 	void testSubListFailure() {
-		MyList<Integer> list = new MyList<>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
 
-		List<Integer> invalidSubList = list.subList(-1, 5);
+		MyList<Integer> invalidSubList = list.subList(-1, 5);
 		assertTrue(invalidSubList.isEmpty());
 
 		invalidSubList = list.subList(2, 1);
@@ -178,6 +173,22 @@ class MyListTest {
 		assertEquals(1, list.get(0));
 		assertEquals(2, list.get(1));
 		assertEquals(3, list.get(2));
+	}
+
+	@Test
+	void testSubListInvalidIndexes() {
+		list.add(1);
+		list.add(2);
+		list.add(3);
+
+		MyList<Integer> subList1 = list.subList(-1, 2);
+		assertTrue(subList1.isEmpty());
+
+		MyList<Integer> subList2 = list.subList(0, 5);
+		assertTrue(subList2.isEmpty());
+
+		MyList<Integer> subList3 = list.subList(2, 1);
+		assertTrue(subList3.isEmpty());
 	}
 
 	@Test
@@ -380,7 +391,6 @@ class MyListTest {
 	@Test
 	void testToArrayWhenEmpty() {
 		Object[] array = list.toArray();
-		
 
 		assertNotNull(array);
 		assertEquals(0, array.length);
@@ -388,190 +398,183 @@ class MyListTest {
 
 	@Test
 	void testGrowMethodCalledFromAdd() {
-	    for (int i = 0; i < 10; i++) {
-	        list.add(i);
-	    }
+		for (int i = 0; i < 10; i++) {
+			list.add(i);
+		}
 
-	    int initialCapacity = list.toArray().length;
+		list.add(10, 49);
 
-	    list.add(10, 49);
+		int newCapacity = list.toArray().length;
 
-	    int newCapacity = list.toArray().length;
-
-	    assertEquals(11, newCapacity);
+		assertEquals(11, newCapacity);
 	}
-	
+
 	@Test
 	void testRemoveIndexSuccess() {
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
-	    
-	    int initialSize = list.size();
-	    
-	    Integer removedItem = list.remove(1);
-	    
-	    assertEquals(Integer.valueOf(2), removedItem);
-	    assertEquals(initialSize - 1, list.size());
-	    assertEquals(Integer.valueOf(1), list.get(0));
-	    assertEquals(Integer.valueOf(3), list.get(1));
+		list.add(1);
+		list.add(2);
+		list.add(3);
+
+		int initialSize = list.size();
+
+		Integer removedItem = list.remove(1);
+
+		assertEquals(Integer.valueOf(2), removedItem);
+		assertEquals(initialSize - 1, list.size());
+		assertEquals(Integer.valueOf(1), list.get(0));
+		assertEquals(Integer.valueOf(3), list.get(1));
 	}
-	
+
 	@Test
 	void testRemoveFail() {
-	    list.add(1);
-	    list.add(2);
-	    
-	    Integer removedItem1 = list.remove(-1);
-	    Integer removedItem2 = list.remove(2);
+		list.add(1);
+		list.add(2);
 
-	    assertNull(removedItem1);
-	    assertNull(removedItem2);
+		Integer removedItem1 = list.remove(-1);
+		Integer removedItem2 = list.remove(2);
+
+		assertNull(removedItem1);
+		assertNull(removedItem2);
 	}
-	
+
 	@Test
 	void testListIteratorSuccess() {
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
-	    
-	    ListIterator<Integer> iterator = list.listIterator();
+		list.add(1);
+		list.add(2);
+		list.add(3);
 
-	    assertTrue(iterator.hasNext());
-	    assertEquals(Integer.valueOf(1), iterator.next());
-	    assertEquals(Integer.valueOf(2), iterator.next());
-	    assertEquals(Integer.valueOf(3), iterator.next());
-	    assertFalse(iterator.hasNext());
+		ListIterator<Integer> iterator = list.listIterator();
+
+		assertTrue(iterator.hasNext());
+		assertEquals(Integer.valueOf(1), iterator.next());
+		assertEquals(Integer.valueOf(2), iterator.next());
+		assertEquals(Integer.valueOf(3), iterator.next());
+		assertFalse(iterator.hasNext());
 	}
 
 	@Test
 	void testListIteratorPreviousSuccess() {
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
-	    
-	    ListIterator<Integer> iterator = list.listIterator();
+		list.add(1);
+		list.add(2);
+		list.add(3);
 
-	    iterator.next();
-	    iterator.next();
-	    iterator.next();
+		ListIterator<Integer> iterator = list.listIterator();
 
-	    assertTrue(iterator.hasPrevious());
-	    assertEquals(Integer.valueOf(3), iterator.previous());
-	    assertEquals(Integer.valueOf(2), iterator.previous());
-	    assertEquals(Integer.valueOf(1), iterator.previous());
-	    assertFalse(iterator.hasPrevious());
-	    iterator.add(1);
-	    iterator.set(1);
-	    assertEquals(Integer.valueOf(0), iterator.previousIndex());
-	    assertEquals(Integer.valueOf(1), iterator.nextIndex());
-	    
+		iterator.next();
+		iterator.next();
+		iterator.next();
+
+		assertTrue(iterator.hasPrevious());
+		assertEquals(Integer.valueOf(3), iterator.previous());
+		assertEquals(Integer.valueOf(2), iterator.previous());
+		assertEquals(Integer.valueOf(1), iterator.previous());
+		assertFalse(iterator.hasPrevious());
+		iterator.add(1);
+		iterator.set(1);
+		assertEquals(Integer.valueOf(0), iterator.previousIndex());
+		assertEquals(Integer.valueOf(1), iterator.nextIndex());
+
 	}
-	
+
 	@Test
 	void testListIteratorFail() {
-	    list.add(1);
-	    
-	    ListIterator<Integer> iterator = list.listIterator();
+		list.add(1);
 
-	    iterator.next();
-	    assertNull(iterator.next());
-	    iterator.remove();
-	    iterator.set(2);
-	    assertNull(iterator.previous());
+		ListIterator<Integer> iterator = list.listIterator();
+
+		iterator.next();
+		assertNull(iterator.next());
+		iterator.remove();
+		iterator.set(2);
+		assertNull(iterator.previous());
 	}
 
 	@Test
 	void testToArraySuccess() {
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
+		list.add(1);
+		list.add(2);
+		list.add(3);
 
-	    Integer[] array = new Integer[5];
-	    Integer[] result = list.toArray(array);
+		Integer[] array = new Integer[5];
+		Integer[] result = list.toArray(array);
 
-	    assertEquals(5, result.length);
-	    assertEquals(Integer.valueOf(1), result[0]);
-	    assertEquals(Integer.valueOf(2), result[1]);
-	    assertEquals(Integer.valueOf(3), result[2]);
-	    assertNull(result[3]);
-	    assertNull(result[4]);
+		assertEquals(5, result.length);
+		assertEquals(Integer.valueOf(1), result[0]);
+		assertEquals(Integer.valueOf(2), result[1]);
+		assertEquals(Integer.valueOf(3), result[2]);
+		assertNull(result[3]);
+		assertNull(result[4]);
 	}
-	
+
 	@Test
 	void testToArrayWithInsufficientSize() {
-	    list.add(1);
-	    list.add(2);
-	    list.add(3);
+		list.add(1);
+		list.add(2);
+		list.add(3);
 
-	    Integer[] array = new Integer[2];
-	    Integer[] result = list.toArray(array);
+		Integer[] array = new Integer[2];
+		Integer[] result = list.toArray(array);
 
-	    assertEquals(3, result.length);
-	    assertEquals(Integer.valueOf(1), result[0]);
-	    assertEquals(Integer.valueOf(2), result[1]);
-	    assertEquals(Integer.valueOf(3), result[2]);
+		assertEquals(3, result.length);
+		assertEquals(Integer.valueOf(1), result[0]);
+		assertEquals(Integer.valueOf(2), result[1]);
+		assertEquals(Integer.valueOf(3), result[2]);
 	}
 
 	@Test
 	void testListIteratorIndexSuccess() {
-	    list.add(10);
-	    list.add(20);
-	    list.add(30);
+		list.add(10);
+		list.add(20);
+		list.add(30);
 
-	    ListIterator<Integer> iterator = list.listIterator(1);
+		ListIterator<Integer> iterator = list.listIterator(1);
 
-	    assertTrue(iterator.hasNext());
-	    assertEquals(Integer.valueOf(20), iterator.next());
+		assertTrue(iterator.hasNext());
+		assertEquals(Integer.valueOf(20), iterator.next());
 
-	    assertTrue(iterator.hasPrevious());
-	    assertEquals(Integer.valueOf(2), iterator.nextIndex());
+		assertTrue(iterator.hasPrevious());
+		assertEquals(Integer.valueOf(2), iterator.nextIndex());
 
-	    iterator.add(25);
-	    assertTrue(iterator.hasPrevious());
-	    assertEquals(Integer.valueOf(25), iterator.previous());
+		iterator.add(25);
+		assertTrue(iterator.hasPrevious());
+		assertEquals(Integer.valueOf(25), iterator.previous());
 
-	    iterator.set(15);
-	    assertEquals(Integer.valueOf(15), iterator.previous());
-	    
-	    iterator.next();
-	    iterator.next();
-	    iterator.next();
-	    assertNull(iterator.next());
+		iterator.set(15);
+		assertEquals(Integer.valueOf(15), iterator.previous());
+
+		iterator.next();
+		iterator.next();
+		iterator.next();
+		assertNull(iterator.next());
 	}
-	
+
 	@Test
 	void testListIteratorFailure() {
-	    list.add(10);
-	    list.add(20);
+		list.add(10);
+		list.add(20);
 
-	    ListIterator<Integer> invalidIterator = list.listIterator(3);
-	    assertFalse(invalidIterator.hasNext());
-	    assertFalse(invalidIterator.hasPrevious());
-	    assertNull(invalidIterator.next());
-	    assertNull(invalidIterator.previous());
+		ListIterator<Integer> invalidIterator = list.listIterator(3);
+		assertFalse(invalidIterator.hasNext());
+		assertNull(invalidIterator.next());
+		assertNull(invalidIterator.previous());
 
-	    ListIterator<Integer> iterator = list.listIterator(0);
-	    assertFalse(iterator.hasPrevious());
-	    assertNull(iterator.previous());
+		ListIterator<Integer> iterator = list.listIterator(0);
+		assertFalse(iterator.hasPrevious());
+		assertNull(iterator.previous());
 
-	    iterator.next();
-	    iterator.remove();
-	    iterator.previousIndex();
-	    assertEquals(1, list.size());
+		iterator.next();
+		iterator.remove();
+		iterator.previousIndex();
+		assertEquals(1, list.size());
 
-	    iterator.remove();
-	    assertEquals(1, list.size());
+		iterator.remove();
+		assertEquals(1, list.size());
 
-	    iterator.set(30);
-	    assertEquals(20, list.get(0));
+		iterator.set(30);
+		assertEquals(20, list.get(0));
 
-	    iterator.add(40);
-	    assertEquals(2, list.size());
-	    assertEquals(40, list.get(0));
+		iterator.add(40);
+		assertEquals(2, list.size());
+		assertEquals(40, list.get(0));
 	}
-
-
-
-
 }
