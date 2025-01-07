@@ -9,11 +9,15 @@ public class CustomMatrix {
     private final Character[] characters;
     private final Integer[] numbers;
 
-    public CustomMatrix(Character[] characters, Integer[] numbers) {
-        this.characters = characters.clone();
-        this.numbers = numbers.clone();
+    public CustomMatrix(Object[] characters, Object[] numbers) {
+        try {
+    	this.characters = (Character[])characters.clone();
+        this.numbers = (Integer[])numbers.clone();
+    } catch(ClassCastException ex){
+    	LoggerUtils.logError("Erro ao criar CustomMatrix Tipo de valor inválido. " + characters.getClass() + " " + numbers.getClass() + ex.getMessage());
+        throw new InvalidTypeException("Tipo de valor inválido: " + ex.getMessage());
     }
-
+    }
     public void addCharacter(int index, Object value) {
         setValue(index, value, true);
     }

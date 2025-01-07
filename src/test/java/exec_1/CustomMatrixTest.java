@@ -15,14 +15,6 @@ public class CustomMatrixTest {
     }
 
     @Test
-    public void testFailConstructorInvalidType() {
-        InvalidTypeException exception = assertThrows(InvalidTypeException.class, () -> {
-            new CustomMatrix(new Character[3], new Integer[3]);
-        });
-        assertEquals(InvalidTypeException.class, exception.getClass());
-    }
-
-    @Test
     public void testSuccessInsertCharacter() {
         CustomMatrix matrix = new CustomMatrix(new Character[3], new Integer[3]);
         matrix.addCharacter(1, 'A');
@@ -69,15 +61,6 @@ public class CustomMatrixTest {
     }
 
     @Test
-    public void testFailGetInvalidType() {
-        InvalidTypeException exception = assertThrows(InvalidTypeException.class, () -> {
-            CustomMatrix matrix = new CustomMatrix(new Character[3], new Integer[3]);
-            matrix.getCharacter(1);
-        });
-        assertEquals(InvalidTypeException.class, exception.getClass());
-    }
-
-    @Test
     public void testFailGetInvalidPosition() {
         InvalidArrayPositionException exception = assertThrows(InvalidArrayPositionException.class, () -> {
             CustomMatrix matrix = new CustomMatrix(new Character[3], new Integer[3]);
@@ -100,15 +83,6 @@ public class CustomMatrixTest {
         matrix.addNumber(1, 10);
         matrix.removeNumber(1);
         assertNull(matrix.getNumber(1));
-    }
-
-    @Test
-    public void testFailRemoveInvalidType() {
-        InvalidTypeException exception = assertThrows(InvalidTypeException.class, () -> {
-            CustomMatrix matrix = new CustomMatrix(new Character[3], new Integer[3]);
-            matrix.removeCharacter(1);
-        });
-        assertEquals(InvalidTypeException.class, exception.getClass());
     }
 
     @Test

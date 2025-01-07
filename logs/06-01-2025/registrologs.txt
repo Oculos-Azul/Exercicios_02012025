@@ -1,0 +1,108 @@
+06-01-2025 23:24:00 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:24:00 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:24:00 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:24:00 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:24:00 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:24:00 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:03 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:03 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:35:03 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:35:03 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:03 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:35:03 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:28 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:29 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:35:29 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:35:29 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:35:29 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:35:29 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:13 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:13 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:36:13 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:13 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:13 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:36:13 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:30 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:30 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:36:30 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:30 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:30 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:36:30 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:45 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:45 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:36:45 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:36:45 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:36:45 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:36:45 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:37:43 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:37:43 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Caractere removido na posição 1
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Caractere inserido na posição 1: A
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Número removido na posição 1
+06-01-2025 23:37:43 ERROR utils.LoggerUtils - Erro ao remover valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
+06-01-2025 23:37:43 ERROR utils.LoggerUtils - Erro ao recuperar valor no índice 5: Índice fora dos limites. Index 5 out of bounds for length 3
+06-01-2025 23:37:43 ERROR utils.LoggerUtils - Erro ao inserir valor no índice 1: Tipo de valor inválido. class java.lang.String cannot be cast to class java.lang.Character (java.lang.String and java.lang.Character are in module java.base of loader 'bootstrap')
+06-01-2025 23:37:43 INFO  utils.LoggerUtils - Número inserido na posição 1: 10
